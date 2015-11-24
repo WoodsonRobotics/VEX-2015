@@ -8,5 +8,5 @@
 
 task main()
 {
-
+	startTask(battery);
 }
