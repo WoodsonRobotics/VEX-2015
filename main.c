@@ -5,6 +5,7 @@
 #include "tilt.c"
 #include "launch.c"
 #include "battery.c"
+#include "remoteControl.c"
 
 task main()
 {
