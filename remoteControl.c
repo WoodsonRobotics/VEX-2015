@@ -4,24 +4,19 @@ bool ButtonPressed(TVexJoysticks bt)
 	else return false;
 }
 
-void killEverything()
-{
-	if(ButtonPressed(Btn5U) && ButtonPressed(Btn6D)) stopAllTasks();
-}
 void joystickControl()
 {
+	startRotateClock();
 	while(1)
 	{
-		killEverything();
-		motor[TM] = vexRT[Ch1];
-		if(ButtonPressed(Btn6U))
-		{
-			startLaunch();
-			while(ButtonPressed(Btn6U))
-			{
-				delay(10);
-			}
-			stopLaunch();
-		}
+		// Kill everything command
+		if(ButtonPressed(Btn5U) && ButtonPressed(Btn6D)) stopAllTasks();
+		// Tilt
+		motor[TM] = vexRT[Ch2];
+		//Rotate
+		startRotateClock(vexRT[Ch4]);
+		while (vexRT[Ch4] != 0) delay(100);
+		stopRotateClock();
 	}
+	stopRotateClock();
 }
