@@ -1,8 +1,7 @@
 // Tilting Motors
-#define TL 4
-#define TR 5
-
+#define TM 5
+// Positive aims upwards
 void tilt(int speed, int sec)
 {
-	run2Motors(TL,TR,speed,sec);
+	runMotor(TM,speed,sec);
 }
