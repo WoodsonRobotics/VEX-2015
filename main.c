@@ -4,10 +4,12 @@
 #include "rotate.c"
 #include "tilt.c"
 #include "launch.c"
-#include "battery.c"
 #include "remoteControl.c"
+//#include "battery.c"
 
 task main()
 {
-	startTask(battery);
+	startLaunch();
+	delay(1000);
+	stopLaunch();
 }
