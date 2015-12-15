@@ -6,11 +6,9 @@ bool ButtonPressed(TVexJoysticks bt)
 
 void joystickControl()
 {
-	startRotateClock();
-	while(1)
+	//startRotateClock();
+	while(!(ButtonPressed(Btn5U) && ButtonPressed(Btn6D))
 	{
-		// Kill everything command
-		if(ButtonPressed(Btn5U) && ButtonPressed(Btn6D)) stopAllTasks();
 		// Tilt
 		motor[TM] = vexRT[Ch2];
 		//Rotate
