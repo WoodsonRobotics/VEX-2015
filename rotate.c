@@ -14,9 +14,9 @@ void stopRotateClock()
 }
 void rotateClock(int speed, float sec)
 {
-	run2IndMotors(RF,RB,speed,speed,sec);
+	run2Motors(RF,RB,speed,sec);
 }
 void rotateCounter(int speed, float sec)
 {
-	run2IndMotors(RF,RB,-speed,-speed,sec);
+	run2Motors(RF,RB,-speed,sec);
 }
