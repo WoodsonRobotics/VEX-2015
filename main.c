@@ -1,8 +1,9 @@
 #pragma platform(VEX)
 
 // Timing for Competitions
-#pragma autonomousDuration(20)
-#pragma userControlDuration(120)
+#define AD 15
+#pragma autonomousDuration(AD)
+#pragma userControlDuration(105)
 
 // UNCOMMENT NEXT TWO LINES FOR COMPETITIONS
 //#pragma competitionControl(Competition)
@@ -29,7 +30,7 @@ void pre_auton()
 task autonomous()
 {
 	startLaunch();
-	while(1){}
+	delay(AD*1000);
 }
 task usercontrol()
 {
