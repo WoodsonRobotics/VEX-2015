@@ -4,7 +4,7 @@
 #pragma autonomousDuration(20)
 #pragma userControlDuration(120)
 
-// TODO: Uncomment nex two lines for competitions
+// UNCOMMENT NEXT TWO LINES FOR COMPETITIONS
 //#pragma competitionControl(Competition)
 //#include "Vex_Competition_Includes.c"
 
