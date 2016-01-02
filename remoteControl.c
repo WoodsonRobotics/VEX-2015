@@ -11,9 +11,9 @@ void joystickControl()
 		// Tilt
 		motor[TM] = vexRT[Ch2];
 		//Rotate
-		startRotateClock(vexRT[Ch4]);
-		while (vexRT[Ch4] != 0) delay(100);
-		stopRotateClock();
+		startRotateClock(vexRT[Ch4]/3);
 	}
 	stopRotateClock();
+	tilt(0,0);
+	stopLaunch();
 }
