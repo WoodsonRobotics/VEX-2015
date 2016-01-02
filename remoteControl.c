@@ -6,7 +6,8 @@ bool ButtonPressed(TVexJoysticks bt)
 
 void joystickControl()
 {
-	while( !( ButtonPressed(Btn5U) && ButtonPressed(Btn6D) ) )
+	while(true)
+		//( !( ButtonPressed(Btn5U) && ButtonPressed(Btn6D) ) )
 	{
 		// Tilt
 		motor[TM] = vexRT[Ch2];
