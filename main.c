@@ -1,12 +1,12 @@
 #pragma platform(VEX)
 
-#pragma competitionControl(Competition)
 // Timing for Competitions
 #pragma autonomousDuration(20)
 #pragma userControlDuration(120)
 
-// Uncomment for competitions
-//#include "Vex_Competition_Includes.c"   //Main competition background code...do not modify!
+// TODO: Uncomment nex two lines for competitions
+//#pragma competitionControl(Competition)
+//#include "Vex_Competition_Includes.c"
 
 // Hacky dependency control
 // Expect this to break at some point
@@ -20,11 +20,11 @@
 task main()
 {
 	startLaunch();
-	//joystickControl();
 	while(1){}
 }
 
-void pre_auton() {}
+void pre_auton()
+{}
 
 task autonomous()
 {
