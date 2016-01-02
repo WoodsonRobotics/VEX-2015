@@ -1,12 +1,12 @@
 // Launcher Motors
 #define LL 3
 #define LR 4
-#define LSPD 127
+#define LSPD 100
 
 void startLaunch()
 {
-	motor[LL] = -LSPD;
-	motor[LR] = LSPD;
+	motor[LL] = LSPD;
+	motor[LR] = -LSPD;
 }
 void stopLaunch()
 {
