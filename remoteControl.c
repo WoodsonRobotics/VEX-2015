@@ -6,7 +6,6 @@ bool ButtonPressed(TVexJoysticks bt)
 
 void joystickControl()
 {
-	//startRotateClock();
 	while( !( ButtonPressed(Btn5U) && ButtonPressed(Btn6D) ) )
 	{
 		// Tilt
