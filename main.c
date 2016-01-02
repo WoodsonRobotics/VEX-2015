@@ -10,6 +10,5 @@
 task main()
 {
 	startLaunch();
-	delay(1000);
-	stopLaunch();
+	while(1){}
 }
