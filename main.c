@@ -6,6 +6,7 @@
 #pragma userControlDuration(105)
 
 // UNCOMMENT NEXT TWO LINES FOR COMPETITIONS
+// COMMENT OUT MAIN
 //#pragma competitionControl(Competition)
 //#include "Vex_Competition_Includes.c"
 
@@ -18,11 +19,7 @@
 #include "remoteControl.c"
 //#include "battery.c"
 
-task main()
-{
-	startLaunch();
-	while(1){}
-}
+task main() { startLaunch(); while(1){} }
 
 void pre_auton()
 {}
