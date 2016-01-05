@@ -20,3 +20,7 @@ void rotateCounter(int speed, float sec)
 {
 	run2Motors(RF,RB,-speed,sec);
 }
+void moveForward(int speed, float sec)
+{
+	run2IndMotors(RF,RB,speed,-speed,sec);
+}
