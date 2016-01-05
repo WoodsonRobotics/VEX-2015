@@ -1,7 +1,7 @@
 // Launcher Motors
 #define LL 3
 #define LR 4
-#define LSPD 85
+#define LSPD 70
 
 void startLaunch()
 {
