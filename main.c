@@ -2,7 +2,7 @@
 #define AD 15
 
 // UNCOMMENT NEXT LINES FOR COMPETITIONS
-// COMMENT OUT MAIN
+// COMMENT OUT MAIN FOR COMPETITIONS
 //#pragma platform(VEX)
 //#pragma competitionControl(Competition)
 //#pragma autonomousDuration(AD)
