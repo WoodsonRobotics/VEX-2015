@@ -1,13 +1,12 @@
-#pragma platform(VEX)
-
 // Timing for Competitions
 #define AD 15
-#pragma autonomousDuration(AD)
-#pragma userControlDuration(105)
 
-// UNCOMMENT NEXT TWO LINES FOR COMPETITIONS
+// UNCOMMENT NEXT LINES FOR COMPETITIONS
 // COMMENT OUT MAIN
+//#pragma platform(VEX)
 //#pragma competitionControl(Competition)
+//#pragma autonomousDuration(AD)
+//#pragma userControlDuration(105)
 //#include "Vex_Competition_Includes.c"
 
 // Hacky dependency control
