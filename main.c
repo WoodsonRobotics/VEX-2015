@@ -34,5 +34,6 @@ task autonomous()
 }
 task usercontrol()
 {
+	startLaunch();
 	joystickControl();
 }
