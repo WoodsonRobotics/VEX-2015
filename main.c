@@ -1,5 +1,6 @@
 // Autonomous Duration in Competitions
 #define AD 15
+
 // UNCOMMENT NEXT LINES FOR COMPETITIONS
 // COMMENT OUT MAIN FOR COMPETITIONS
 //#pragma platform(VEX)
