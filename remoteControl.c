@@ -10,7 +10,7 @@ void joystickControl()
 		//( !( ButtonPressed(Btn5U) && ButtonPressed(Btn6D) ) )
 	{
 		// Tilt
-		motor[TM] = vexRT[Ch2];
+		motor[TM] = vexRT[Ch2]/3;
 		//Rotate
 		startRotateClock(vexRT[Ch4]/3);
 	}
