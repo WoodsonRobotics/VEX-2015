@@ -1,3 +1,4 @@
+// 99339Ray
 // Autonomous Duration in Competitions
 #define AD 15
 
@@ -32,3 +33,5 @@ task usercontrol()
 	startLaunch();
 	joystickControl();
 }
+
+//task main() { usercontrol(); }
