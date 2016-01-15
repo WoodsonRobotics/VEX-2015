@@ -14,7 +14,7 @@ void joystickControl()
 		//Rotate
 		startRotateClock(vexRT[Ch4]/3);
 		// Forward
-		startForward(vexRT[ch3]);
+		startForward(vexRT[Ch3]);
 	}
 	stopRotateClock();
 	tilt(0,0);
