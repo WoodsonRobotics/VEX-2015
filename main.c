@@ -23,14 +23,20 @@ task main() { startLaunch(); while(1){} }
 
 void pre_auton()
 {}
-
+void setupMotors()
+{
+	// Code common to auto and user periods
+	startLaunch();
+	// Hack to keep the launcher tilted
+	motor[TM] = 2;
+}
 task autonomous()
 {
-	startLaunch();
+	setupMotors();
 	delay(AD*1000);
 }
 task usercontrol()
 {
-	startLaunch();
+	setupMotors();
 	joystickControl();
 }
