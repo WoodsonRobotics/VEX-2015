@@ -13,6 +13,8 @@ void joystickControl()
 		motor[TM] = vexRT[Ch2]/3;
 		//Rotate
 		startRotateClock(vexRT[Ch4]/3);
+		// Forward
+		startForward(vexRT[ch3]);
 	}
 	stopRotateClock();
 	tilt(0,0);

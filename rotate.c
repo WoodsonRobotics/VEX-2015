@@ -24,3 +24,8 @@ void moveForward(int speed, float sec)
 {
 	run2IndMotors(RF,RB,speed,-speed,sec);
 }
+void startForward(int speed)
+{
+	motor[RF] = speed;
+	motor[RB] = -speed;
+}
