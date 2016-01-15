@@ -2,14 +2,15 @@
 // Autonomous Duration in Competitions
 #define AD 15
 
-// UNCOMMENT NEXT LINES FOR COMPETITIONS
+// UNCOMMENT NEXT LINE FOR COMPETITIONS
 // COMMENT OUT MAIN FOR COMPETITIONS
-//#pragma platform(VEX)
-//#pragma competitionControl(Competition)
-//#pragma autonomousDuration(AD)
-//#pragma userControlDuration(105)
-//#include "Vex_Competition_Includes.c"
-
+/*
+#pragma platform(VEX)
+#pragma competitionControl(Competition)
+#pragma autonomousDuration(AD)
+#pragma userControlDuration(105)
+#include "Vex_Competition_Includes.c"
+//*/
 // Hacky dependency control
 // Expect this to break at some point
 #include "motorControl.c"
@@ -33,5 +34,3 @@ task usercontrol()
 	startLaunch();
 	joystickControl();
 }
-
-//task main() { usercontrol(); }
