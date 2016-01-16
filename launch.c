@@ -25,16 +25,6 @@ void flick()
 	runMotor(FM,FUP,0.2);
 	runMotor(FM,FDOWN,0.1);
 }
-task launch()
-{
-	delay(4000);
-	for(int i = 0; i < 3;i++)
-	{
-		flick();
-		delay(4000);
-	}
-}
-
 void launchForever()
 {
 	delay(4000);
@@ -44,3 +34,14 @@ void launchForever()
 		delay(4000);
 	}
 }
+/*
+task launch()
+{
+	delay(4000);
+	for(int i = 0; i < 3;i++)
+	{
+		flick();
+		delay(4000);
+	}
+}
+*/
