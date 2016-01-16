@@ -8,7 +8,7 @@
 // Launcher Speed
 #define LSPD 70
 // Flicker speeds
-#define FUP 50
+#define FUP 100
 #define FDOWN -5
 
 void startLaunch()
@@ -27,13 +27,13 @@ void flick()
 	runMotor(FM,FUP,0.2);
 	runMotor(FM,FDOWN,0.1);
 }
-void launch()
+task launch()
 {
 	delay(4000);
 	for(int i = 0; i < 3;i++)
 	{
 		flick();
-		delay(2000);
+		delay(4000);
 	}
 }
 
