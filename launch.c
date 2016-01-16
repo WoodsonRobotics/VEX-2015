@@ -3,8 +3,6 @@
 #define LR 4
 // Flick Motor
 #define FM 6
-// Number of Balls
-#define NB 3
 // Launcher Speed
 #define LSPD 70
 // Flicker speeds
@@ -43,6 +41,6 @@ void launchForever()
 	for(;;)
 	{
 		flick();
-		delay(3000);
+		delay(4000);
 	}
 }
