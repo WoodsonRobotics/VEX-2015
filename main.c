@@ -19,17 +19,20 @@
 #include "launch.c"
 #include "remoteControl.c"
 
-task main() { startLaunch(); while(1){} }
-
-void pre_auton()
-{}
 void setupMotors()
 {
 	// Code common to auto and user periods
 	startLaunch();
+	launchForever()
+	//tilt(50,1);
 	// Hack to keep the launcher tilted
-	motor[TM] = 2;
+	//motor[TM] = 2;
+	while(1) {}
 }
+
+void pre_auton()
+{}
+
 task autonomous()
 {
 	setupMotors();
@@ -37,6 +40,7 @@ task autonomous()
 }
 task usercontrol()
 {
-	setupMotors();
 	joystickControl();
 }
+//task main() { setupMotors(); }
+task main() { joystickControl(); }
