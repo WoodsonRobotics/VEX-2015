@@ -9,9 +9,11 @@
 #pragma userControlDuration(105)
 #include "Vex_Competition_Includes.c"
 //*/
+
 // Hacky dependency control
 // Expect this to break at some point
 #include "motor.c"
+#include "move.c"
 #include "remoteControl.c"
 
 void pre_auton()
@@ -19,8 +21,7 @@ void pre_auton()
 
 task autonomous()
 {
-	startLaunch();
-	launchForever();
+
 }
 task usercontrol()
 {
