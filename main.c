@@ -14,7 +14,7 @@
 // Expect this to break at some point
 #include "motor.c"
 #include "move.c"
-#include "remoteControl.c"
+#include "remote.c"
 #include "launch.c"
 #include "intake.c"
 
@@ -27,6 +27,7 @@ task autonomous()
 }
 task usercontrol()
 {
+
 	joystickControl();
 }
 
