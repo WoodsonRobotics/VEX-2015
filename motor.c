@@ -17,3 +17,6 @@
 // Launcher
 #define LR 7
 #define LL 8
+
+// Flicker
+#define FM 9
