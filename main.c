@@ -16,6 +16,7 @@
 #include "move.c"
 #include "remoteControl.c"
 #include "launch.c"
+#include "intake.c"
 
 void pre_auton()
 {}
