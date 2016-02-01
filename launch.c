@@ -1,8 +1,3 @@
-// Launcher Motors
-#define LL 3
-#define LR 4
-// Flick Motor
-#define FM 6
 // Launcher Speed
 #define LSPD 70
 // Flicker speeds
@@ -22,8 +17,12 @@ void stopLaunch()
 void flick()
 {
 	// Flick the projectiles into the launcher
-	runMotor(FM,FUP,0.2);
-	runMotor(FM,FDOWN,0.1);
+	motor[FM] = FUP;
+	delay(200);
+	motor[FM] = 0;
+	motor[FM] = FDOWN;
+	delay(100);
+	motor[FM] = 0;
 }
 void launchForever()
 {
@@ -34,14 +33,3 @@ void launchForever()
 		delay(4000);
 	}
 }
-/*
-task launch()
-{
-	delay(4000);
-	for(int i = 0; i < 3;i++)
-	{
-		flick();
-		delay(4000);
-	}
-}
-*/
