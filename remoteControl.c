@@ -8,7 +8,7 @@ void joystickControl()
 	// Genius code by Daniel
 	// Blame him when it breaks
 	int v, v2, h, h2;
-	double a, b;
+	float a, b;
 
 	while(true)
 	{
