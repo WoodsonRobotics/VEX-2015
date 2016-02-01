@@ -5,14 +5,25 @@ bool btnPress(TVexJoysticks bt)
 }
 void joystickControl()
 {
+	// Genius code by Daniel
+	// Blame him when it breaks
+	int v, v2, h, h2;
+	double a, b;
+
 	while(true)
-		//( !( ButtonPressed(Btn5U) && ButtonPressed(Btn6D) ) )
 	{
-		// Rotate/Foward
-		motor[RF] = vexRT[Ch3];
-		motor[RB] = -vexRT[Ch2];
-		if (btnPress(Btn8U)) flick();
-		if (btnPress(Btn6U)) startLaunch();
-		if (btnPress(Btn6D)) stopLaunch();
+		v = motor[Ch4];
+		h = motor[Ch3];
+
+		a = atan2(v,h);
+		b = sqrt(pow(v,2)+pow(h,2));
+
+		a = a - PI/4;
+
+		v2 = v2*b;
+		h2 = h2*b;
+
+		rightMotors(h2);
+		leftMotors(v2);
 	}
 }
