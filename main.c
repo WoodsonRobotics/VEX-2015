@@ -15,6 +15,7 @@
 #include "motor.c"
 #include "move.c"
 #include "remoteControl.c"
+#include "launch.c"
 
 void pre_auton()
 {}
