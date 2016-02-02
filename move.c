@@ -10,3 +10,9 @@ void leftMotors(int speed)
 	motor[LF] = speed;
 	motor[LB] = speed;
 }
+
+void move(int speed)
+{
+	rightMotors(speed);
+	leftMotors(speed);
+}
