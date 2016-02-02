@@ -3,7 +3,10 @@
 // Flicker speeds
 #define FUP 100
 #define FDOWN -5
-
+// Number of Preloads
+#define PREL 4
+// Milliseconds between launch
+#define LDEL 3000
 void startLaunch()
 {
 	motor[LL] = LSPD;
@@ -19,17 +22,16 @@ void flick()
 	// Flick the projectiles into the launcher
 	motor[FM] = FUP;
 	delay(200);
-	motor[FM] = 0;
 	motor[FM] = FDOWN;
 	delay(100);
 	motor[FM] = 0;
 }
-void launchForever()
+void flickPrel()
 {
-	delay(4000);
-	for(;;)
+	delay(LDEL);
+	for(int i = 0;i < PREL;i++)
 	{
 		flick();
-		delay(4000);
+		delay(LDEL);
 	}
 }
