@@ -6,7 +6,7 @@
 // Lifter Speed
 #define LTSPD 100
 
-void goFeeder()
+void startFeeder()
 {
 	motor[FD] = FSPD;
 }
@@ -15,12 +15,22 @@ void stopFeeder()
 	motor[FD] = 0;
 }
 
-void goLifter()
+void startLifter()
 {
 	motor[LT] = LTSPD;
 }
-
 void stopLifter()
 {
 	motor[LT] = 0;
+}
+
+void startIntake()
+{
+	startFeeder();
+	startLifter();
+}
+void stopIntake()
+{
+	stopFeeder();
+	stopLifter();
 }
