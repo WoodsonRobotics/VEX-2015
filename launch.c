@@ -4,7 +4,7 @@
 #define FUP 100
 #define FDOWN -5
 // Number of Preloads
-#define PREL 4
+#define PRE 4
 // Milliseconds between launch
 #define LDEL 3000
 void startLaunch()
@@ -26,10 +26,10 @@ void flick()
 	delay(100);
 	motor[FM] = 0;
 }
-void flickPrel()
+void flickPre()
 {
 	delay(LDEL);
-	for(int i = 0;i < PREL;i++)
+	for(int i = 0;i < PRE;i++)
 	{
 		flick();
 		delay(LDEL);

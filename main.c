@@ -24,7 +24,7 @@ void pre_auton()
 task autonomous()
 {
 	startLaunch();
-	flickPrel();
+	flickPre();
 	startIntake();
 	move(100);
 	delay(1000);
