@@ -2,8 +2,8 @@
 
 void joystickControl()
 {
-	int v, v2, h, h2;
-	float a, b;
+	//int v, v2, h, h2;
+	//float a, b;
 
 	while(true)
 	{
@@ -11,14 +11,21 @@ void joystickControl()
 		if (btn(Btn5D)) stopLaunch();
 		if (btn(Btn6U)) startLifter();
 		if (btn(Btn6D)) stopLifter();
+
 		if (btn(Btn8R)) flick();
 		if (btn(Btn8U)) invertFeeder();
-		if (btn(Btn8L)) invertLifter();
+		if (btn(Btn8D)) invertLifter();
+
+		if (btn(Btn7U)) startFeeder();
+		if (btn(Btn7D)) stopFeeder();
+		if (btn(Btn7R)) startLifter();
+		if (btn(Btn7L)) stopLifter();
 
 		// Genius code by Daniel
 		// Blame him when it breaks
-		v = motor[Ch4];
-		h = motor[Ch3];
+		/*
+		v = vexRT[Ch4];
+		h = vexRT[Ch3];
 
 		a = atan2(v,h);
 		b = sqrt(pow(v,2)+pow(h,2));
@@ -30,5 +37,8 @@ void joystickControl()
 
 		rightMotors(h2);
 		leftMotors(v2);
+		*/
+		rightMotors(vexRT[Ch2]);
+		leftMotors(vexRT[Ch3]);
 	}
 }
