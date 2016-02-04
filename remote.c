@@ -9,16 +9,16 @@ void joystickControl()
 	{
 		if (btn(Btn5U)) startLaunch();
 		if (btn(Btn5D)) stopLaunch();
-		if (btn(Btn6U)) startLifter();
-		if (btn(Btn6D)) stopLifter();
 
-		if (btn(Btn8R)) flick();
-		if (btn(Btn8L)) invertFeeder();
-		if (btn(Btn8D)) invertLifter();
+		if (btn(Btn6U)) flick();
 
-		if (btn(Btn7U)) startFeeder();
+		if (btn(btn7U)) startFeeder();
 		if (btn(Btn7D)) stopFeeder();
+		if (btn(Btn7R)) invertFeeder();
 
+		if (btn(Btn8U)) startLifter();
+		if (btn(Btn8D)) stopLifter();
+		if (btn(Btn8R)) invertLifter();
 		// Genius code by Daniel
 		// Blame him when it breaks
 		/*
