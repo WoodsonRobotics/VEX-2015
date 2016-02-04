@@ -21,7 +21,7 @@
 void pre_auton()
 {}
 
-task autonomous()
+void auto()
 {
 	startLaunch();
 	flickPre();
@@ -30,11 +30,14 @@ task autonomous()
 	delay(1000);
 	move(0);
 }
-task usercontrol()
+task autonomous() { auto(); }
+
+void user()
 {
 	startIntake();
 	joystickControl();
 }
+task usercontrol() { user(); }
 
-task main() { startTask(autonomous); }
-//task main() { startTask(usercontrol); }
+//task main() { auto(); }
+//task main() { user(); }
