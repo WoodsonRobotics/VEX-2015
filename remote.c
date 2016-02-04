@@ -5,7 +5,6 @@ bool btn(TVexJoysticks bt)
 }
 void joystickControl()
 {
-
 	int v, v2, h, h2;
 	float a, b;
 
