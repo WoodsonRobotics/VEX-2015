@@ -4,7 +4,7 @@
 int FSPD = 100;
 
 // Lifter Speed
-#define LTSPD 100
+int LTSPD = -100;
 
 void startFeeder()
 {
@@ -14,12 +14,11 @@ void stopFeeder()
 {
 	motor[FD] = 0;
 }
-
 void invertFeeder()
 {
 	FSPD = -FSPD;
+	startFeeder();
 }
-
 void startLifter()
 {
 	motor[LT] = LTSPD;
@@ -28,7 +27,11 @@ void stopLifter()
 {
 	motor[LT] = 0;
 }
-
+void invertLifter()
+{
+	LTSPD = -LTSPD;
+	startLifter();
+}
 void startIntake()
 {
 	startFeeder();
