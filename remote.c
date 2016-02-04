@@ -1,8 +1,5 @@
-bool btn(TVexJoysticks bt)
-{
-	if(vexRT[bt] == 1) return true;
-	else return false;
-}
+#define btn(b) vexRT[b]
+
 void joystickControl()
 {
 	int v, v2, h, h2;
@@ -12,8 +9,8 @@ void joystickControl()
 	{
 		if (btn(Btn5U)) startLaunch();
 		if (btn(Btn5D)) stopLaunch();
-		if (btn(Btn6U)) startFeeder();
-		if (btn(Btn6D)) stopFeeder();
+		if (btn(Btn6U)) startLifter();
+		if (btn(Btn6D)) stopLifter();
 		if (btn(Btn8R)) flick();
 		if (btn(Btn8U)) invertFeeder();
 		if (btn(Btn8L)) invertLifter();
