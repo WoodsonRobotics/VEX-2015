@@ -17,6 +17,7 @@ void joystickControl()
 		if (btn(Btn6D)) stopFeeder();
 		if (btn(Btn8R)) flick();
 		if (btn(Btn8U)) invertFeeder();
+		if (btn(Btn8L)) invertLifter();
 
 		// Genius code by Daniel
 		// Blame him when it breaks
