@@ -9,7 +9,7 @@ void joystickControl()
 		if (vexRT[Btn5D]) stopLaunch();
 
 		if (vexRT[Btn6U]) flick();
-
+		if (vexRT[Btn6D]) changeLaunch();
 		if (vexRT[Btn7U]) startFeeder();
 		if (vexRT[Btn7D]) stopFeeder();
 		if (vexRT[Btn7R]) invertFeeder();
@@ -17,6 +17,7 @@ void joystickControl()
 		if (vexRT[Btn8U]) startLifter();
 		if (vexRT[Btn8D]) stopLifter();
 		if (vexRT[Btn8R]) invertLifter();
+
 		// Genius code by Daniel
 		// Blame him when it breaks
 		/*
