@@ -14,8 +14,8 @@
 // Expect this to break at some point
 #include "motor.c"
 #include "move.c"
-#include "launch.c"
 #include "intake.c"
+#include "launch.c"
 #include "remote.c"
 
 void pre_auton()
@@ -25,10 +25,6 @@ void auto()
 {
 	startLaunch();
 	flickPre();
-	startIntake();
-	move(100);
-	delay(1000);
-	move(0);
 }
 task autonomous() { auto(); }
 
