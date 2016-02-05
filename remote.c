@@ -1,5 +1,3 @@
-#define btn(b) vexRT[b]
-
 void joystickControl()
 {
 	//int v, v2, h, h2;
@@ -7,18 +5,18 @@ void joystickControl()
 
 	while(true)
 	{
-		if (btn(Btn5U)) startLaunch();
-		if (btn(Btn5D)) stopLaunch();
+		if (vexRT[Btn5U]) startLaunch();
+		if (vexRT[Btn5D]) stopLaunch();
 
-		if (btn(Btn6U)) flick();
+		if (vexRT[Btn6U]) flick();
 
-		if (btn(btn7U)) startFeeder();
-		if (btn(Btn7D)) stopFeeder();
-		if (btn(Btn7R)) invertFeeder();
+		if (vexRT[Btn7U]) startFeeder();
+		if (vexRT[Btn7D]) stopFeeder();
+		if (vexRT[Btn7R]) invertFeeder();
 
-		if (btn(Btn8U)) startLifter();
-		if (btn(Btn8D)) stopLifter();
-		if (btn(Btn8R)) invertLifter();
+		if (vexRT[Btn8U]) startLifter();
+		if (vexRT[Btn8D]) stopLifter();
+		if (vexRT[Btn8R]) invertLifter();
 		// Genius code by Daniel
 		// Blame him when it breaks
 		/*
