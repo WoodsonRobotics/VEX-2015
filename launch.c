@@ -1,11 +1,11 @@
 // Launcher Speeds
-#define PRELSPD 85
+#define PRELSPD 90
 #define CLOSELSPD 40
 // Flicker speeds
 #define FUP 100
 #define FDOWN -5
 // Milliseconds between launch
-#define LDEL 6000
+#define LDEL 6500
 
 // Current Launcher speed setting
 int LSPD = PRELSPD;
@@ -39,10 +39,9 @@ void flick()
 }
 void flickPre()
 {
-	delay(LDEL);
 	for(;;)
 	{
-		flick();
 		delay(LDEL);
+		flick();
 	}
 }
