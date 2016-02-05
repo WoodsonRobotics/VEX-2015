@@ -1,21 +1,32 @@
-// Launcher Speed
-#define LSPD 70
+// Launcher Speeds
+#define PRELSPD 85
+#define CLOSELSPD 40
 // Flicker speeds
 #define FUP 100
 #define FDOWN -5
-// Number of Preloads
-#define PRE 4
 // Milliseconds between launch
-#define LDEL 3000
+#define LDEL 6000
+
+// Current Launcher speed setting
+int LSPD = PRELSPD;
+
 void startLaunch()
 {
 	motor[LL] = LSPD;
 	motor[LR] = -LSPD;
 }
+
 void stopLaunch()
 {
 	motor[LL] = 0;
 	motor[LR] = 0;
+}
+
+void changeLaunch()
+{
+	if (LSPD == PRELSPD) LSPD = CLOSELSPD;
+	else if (LSPD == CLOSELSPD) LSPD = PRELSPD;
+	startLaunch();
 }
 void flick()
 {
@@ -29,7 +40,7 @@ void flick()
 void flickPre()
 {
 	delay(LDEL);
-	for(int i = 0;i < PRE;i++)
+	for(;;)
 	{
 		flick();
 		delay(LDEL);
