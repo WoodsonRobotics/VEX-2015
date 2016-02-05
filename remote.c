@@ -5,11 +5,11 @@ void joystickControl()
 
 	while(true)
 	{
-		if (vexRT[Btn5U]) startLaunch();
+		if (vexRT[Btn5U]) fastLaunch();
 		if (vexRT[Btn5D]) stopLaunch();
 
 		if (vexRT[Btn6U]) flick();
-		if (vexRT[Btn6D]) changeLaunch();
+		if (vexRT[Btn6D]) slowLaunch();
 		if (vexRT[Btn7U]) startFeeder();
 		if (vexRT[Btn7D]) stopFeeder();
 		if (vexRT[Btn7R]) invertFeeder();

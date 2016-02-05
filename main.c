@@ -23,7 +23,7 @@ void pre_auton()
 
 void auto()
 {
-	startLaunch();
+	fastLaunch();
 	flickPre();
 }
 task autonomous() { auto(); }

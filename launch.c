@@ -1,19 +1,22 @@
 // Launcher Speeds
-#define PRELSPD 90
-#define CLOSELSPD 40
+#define FAST 65
+#define SLOW 40
 // Flicker speeds
 #define FUP 100
 #define FDOWN -5
 // Milliseconds between launch
-#define LDEL 6500
+#define LDEL 4000
 
-// Current Launcher speed setting
-int LSPD = PRELSPD;
-
-void startLaunch()
+void fastLaunch()
 {
-	motor[LL] = LSPD;
-	motor[LR] = -LSPD;
+	motor[LL] = FAST;
+	motor[LR] = -FAST;
+}
+
+void slowLaunch()
+{
+	motor[LL] = SLOW;
+	motor[LR] = -SLOW;
 }
 
 void stopLaunch()
@@ -22,12 +25,6 @@ void stopLaunch()
 	motor[LR] = 0;
 }
 
-void changeLaunch()
-{
-	if (LSPD == PRELSPD) LSPD = CLOSELSPD;
-	else if (LSPD == CLOSELSPD) LSPD = PRELSPD;
-	startLaunch();
-}
 void flick()
 {
 	// Flick the projectiles into the launcher
