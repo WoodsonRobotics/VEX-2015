@@ -26,6 +26,7 @@ void auto()
 	startIntake();
 	fastLaunch();
 	flickPre();
+	move(100);
 }
 task autonomous() { auto(); }
 
