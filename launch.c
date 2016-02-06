@@ -1,6 +1,6 @@
 // Launcher Speeds
-#define FAST 65
-#define SLOW 40
+#define FAST 100
+#define SLOW 70
 // Flicker speeds
 #define FUP 100
 #define FDOWN -5
