@@ -4,7 +4,7 @@
 #define FSPD 100
 
 // Lifter Speed
-#define LTSPD -100
+#define LTSPD 100
 
 void startFeeder()
 {
