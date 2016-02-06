@@ -23,6 +23,7 @@ void pre_auton()
 
 void auto()
 {
+	startIntake();
 	fastLaunch();
 	flickPre();
 }
