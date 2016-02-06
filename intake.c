@@ -1,10 +1,10 @@
 // Intake motors
 
 // Feeder Speed
-int FSPD = 100;
+#define FSPD 100
 
 // Lifter Speed
-int LTSPD = -100;
+#define LTSPD -100
 
 void startFeeder()
 {
@@ -16,8 +16,7 @@ void stopFeeder()
 }
 void invertFeeder()
 {
-	FSPD = -FSPD;
-	startFeeder();
+	motor[FD] = -FSPD;
 }
 void startLifter()
 {
@@ -29,8 +28,7 @@ void stopLifter()
 }
 void invertLifter()
 {
-	LTSPD = -LTSPD;
-	startLifter();
+	motor[LT] = -LTSPD;
 }
 void startIntake()
 {
