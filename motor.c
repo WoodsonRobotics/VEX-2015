@@ -1,22 +1,22 @@
 // Motors
 
 // Right
-#define RF 7
-#define RB 6
+#define RF 1
+#define RB 2
 
 // Left
-#define LF 1
-#define LB 8
+#define LF 4
+#define LB 3
 
 // Feeder
-#define FD 3
+#define FD 8
 
 // Lifter
-#define LT 9
+#define LT 0
 
 // Launcher
-#define LR 4
-#define LL 5
+#define LR 5
+#define LL 6
 
 // Flicker
-#define FM 2
+#define FM 7
