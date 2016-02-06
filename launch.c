@@ -6,6 +6,8 @@
 #define FDOWN -5
 // Milliseconds between launch
 #define LDEL 4000
+// Number of Preloads
+#define PRE 3
 
 void fastLaunch()
 {
@@ -36,7 +38,7 @@ void flick()
 }
 void flickPre()
 {
-	for(;;)
+	for(int i = 0;i < PRE; i++)
 	{
 		delay(LDEL);
 		flick();
